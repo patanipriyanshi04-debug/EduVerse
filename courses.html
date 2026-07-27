@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Courses | EduVerse</title>
+    <meta name="description" content="Browse our catalog of professional courses in coding, UI/UX design, business, and artificial intelligence.">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- HEADER / NAVIGATION -->
+    <header class="header" id="header">
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+                EduVerse<span class="logo-dot"></span>
+            </a>
+            
+            <nav>
+                <ul class="nav-menu" id="nav-menu">
+                    <li><a href="index.html" class="nav-link">Home</a></li>
+                    <li><a href="about.html" class="nav-link">About</a></li>
+                    <li><a href="courses.html" class="nav-link active">Courses</a></li>
+                    <li><a href="contact.html" class="nav-link">Contact</a></li>
+                </ul>
+            </nav>
+
+            <button class="menu-toggle" id="menu-toggle" aria-label="Toggle navigation menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+
+    <!-- PAGE HEADER -->
+    <section class="page-header">
+        <h1>Our <span class="gradient-text">Courses</span></h1>
+        <p>Acquire high-demand technical and business skills. Filter by category and start learning today.</p>
+    </section>
+
+    <!-- INTERACTIVE COURSES GRID SECTION -->
+    <section class="courses-section">
+        
+        <!-- Filter Bar -->
+        <div class="courses-filter-bar">
+            <button class="filter-btn active" data-filter="all">All Courses</button>
+            <button class="filter-btn" data-filter="coding">Coding</button>
+            <button class="filter-btn" data-filter="design">Design</button>
+            <button class="filter-btn" data-filter="tech">Tech</button>
+            <button class="filter-btn" data-filter="business">Business</button>
+        </div>
+
+        <!-- Course Cards -->
+        <div class="courses-grid" id="courses-grid">
+            
+            <!-- Course 1: Full-Stack Web Development -->
+            <div class="course-card glass-card" data-category="coding">
+                <div class="course-img-placeholder">
+                    <svg viewBox="0 0 24 24" width="48" height="48" stroke="currentColor" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                        <polyline points="16 18 22 12 16 6"></polyline>
+                        <polyline points="8 6 2 12 8 18"></polyline>
+                    </svg>
+                </div>
+                <div class="course-card-meta">
+                    <span>CODING</span>
+                    <span>12 WEEKS</span>
+                </div>
+                <h3>Full-Stack Web Development</h3>
+                <p>Build and deploy production-ready web projects. Learn HTML5, CSS3, modern JavaScript, API integrations, and Node.js backend architecture.</p>
+                <div class="course-card-footer">
+                    <span class="course-price">$499</span>
+                    <a href="#" class="course-link" onclick="event.preventDefault(); alert('Enrollment flow initiated for Full-Stack Web Development');">Enroll Now &rarr;</a>
+                </div>
+            </div>
+
+            <!-- Course 2: UI/UX Design Masterclass -->
+            <div class="course-card glass-card" data-category="design">
+                <div class="course-img-placeholder">
+                    <svg viewBox="0 0 24 24" width="48" height="48" stroke="currentColor" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                        <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+                        <line x1="8" y1="21" x2="16" y2="21"></line>
+                        <line x1="12" y1="17" x2="12" y2="21"></line>
+                    </svg>
+                </div>
+                <div class="course-card-meta">
+                    <span>DESIGN</span>
+                    <span>8 WEEKS</span>
+                </div>
+                <h3>UI/UX Design Masterclass</h3>
+                <p>Master visual design theory, user psychology research, user journey wireframing, high-fidelity prototypes, and design handoffs in Figma.</p>
+                <div class="course-card-footer">
+                    <span class="course-price">$299</span>
+                    <a href="#" class="course-link" onclick="event.preventDefault(); alert('Enrollment flow initiated for UI/UX Design Masterclass');">Enroll Now &rarr;</a>
+                </div>
+            </div>
+
+            <!-- Course 3: AI & Machine Learning Intro -->
+            <div class="course-card glass-card" data-category="tech">
+                <div class="course-img-placeholder">
+                    <svg viewBox="0 0 24 24" width="48" height="48" stroke="currentColor" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path>
+                        <polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline>
+                        <line x1="12" y1="22.08" x2="12" y2="12"></line>
+                    </svg>
+                </div>
+                <div class="course-card-meta">
+                    <span>TECH</span>
+                    <span>16 WEEKS</span>
+                </div>
+                <h3>AI & Machine Learning Intro</h3>
+                <p>Dive deep into neural networks, automated regression analysis models, deep reinforcement learning, and training agents using Python libraries.</p>
+                <div class="course-card-footer">
+                    <span class="course-price">$599</span>
+                    <a href="#" class="course-link" onclick="event.preventDefault(); alert('Enrollment flow initiated for AI & Machine Learning Intro');">Enroll Now &rarr;</a>
+                </div>
+            </div>
+
+            <!-- Course 4: Digital Marketing Specialist -->
+            <div class="course-card glass-card" data-category="business">
+                <div class="course-img-placeholder">
+                    <svg viewBox="0 0 24 24" width="48" height="48" stroke="currentColor" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                        <line x1="18" y1="20" x2="18" y2="10"></line>
+                        <line x1="12" y1="20" x2="12" y2="4"></line>
+                        <line x1="6" y1="20" x2="6" y2="14"></line>
+                    </svg>
+                </div>
+                <div class="course-card-meta">
+                    <span>BUSINESS</span>
+                    <span>6 WEEKS</span>
+                </div>
+                <h3>Digital Marketing Specialist</h3>
+                <p>Increase conversions and scale brand engagement. Master search engine optimization (SEO), Google Search Console, metrics, and paid social ads.</p>
+                <div class="course-card-footer">
+                    <span class="course-price">$199</span>
+                    <a href="#" class="course-link" onclick="event.preventDefault(); alert('Enrollment flow initiated for Digital Marketing Specialist');">Enroll Now &rarr;</a>
+                </div>
+            </div>
+
+            <!-- Course 5: Data Science & Python Core -->
+            <div class="course-card glass-card" data-category="tech">
+                <div class="course-img-placeholder">
+                    <svg viewBox="0 0 24 24" width="48" height="48" stroke="currentColor" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M21.21 15.89A10 10 0 1 1 8 2.83"></path>
+                        <path d="M22 12A10 10 0 0 0 12 2v10z"></path>
+                    </svg>
+                </div>
+                <div class="course-card-meta">
+                    <span>TECH</span>
+                    <span>10 WEEKS</span>
+                </div>
+                <h3>Data Science & Python Core</h3>
+                <p>Learn core Python programming, statistical distributions, data wrangling with Pandas/NumPy, and high-quality charts using Matplotlib.</p>
+                <div class="course-card-footer">
+                    <span class="course-price">$399</span>
+                    <a href="#" class="course-link" onclick="event.preventDefault(); alert('Enrollment flow initiated for Data Science & Python Core');">Enroll Now &rarr;</a>
+                </div>
+            </div>
+
+            <!-- Course 6: Product Management Bootcamp -->
+            <div class="course-card glass-card" data-category="business">
+                <div class="course-img-placeholder">
+                    <svg viewBox="0 0 24 24" width="48" height="48" stroke="currentColor" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                        <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                        <line x1="16" y1="2" x2="16" y2="6"></line>
+                        <line x1="8" y1="2" x2="8" y2="6"></line>
+                        <line x1="3" y1="10" x2="21" y2="10"></line>
+                    </svg>
+                </div>
+                <div class="course-card-meta">
+                    <span>BUSINESS</span>
+                    <span>8 WEEKS</span>
+                </div>
+                <h3>Product Management Bootcamp</h3>
+                <p>Translate code, design, and user objectives into profitable roadmaps. Learn Agile processes, product metrics, and wireframe scoping.</p>
+                <div class="course-card-footer">
+                    <span class="course-price">$349</span>
+                    <a href="#" class="course-link" onclick="event.preventDefault(); alert('Enrollment flow initiated for Product Management Bootcamp');">Enroll Now &rarr;</a>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-brand">
+                <a href="index.html" class="logo">EduVerse<span class="logo-dot"></span></a>
+                <p>Empowering individuals to learn, grow, and craft the future through top-tier online education programs.</p>
+                <div class="social-links">
+                    <a href="#" class="social-icon" aria-label="Twitter">
+                        <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none">
+                            <path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"></path>
+                        </svg>
+                    </a>
+                    <a href="#" class="social-icon" aria-label="GitHub">
+                        <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none">
+                            <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+                        </svg>
+                    </a>
+                    <a href="#" class="social-icon" aria-label="LinkedIn">
+                        <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none">
+                            <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+                            <rect x="2" y="9" width="4" height="12"></rect>
+                            <circle cx="4" cy="4" r="2"></circle>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+            
+            <div class="footer-col">
+                <h4>Sitemap</h4>
+                <ul class="footer-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="courses.html">Our Courses</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-col">
+                <h4>Categories</h4>
+                <ul class="footer-links">
+                    <li><a href="courses.html">Web Development</a></li>
+                    <li><a href="courses.html">User Interface Design</a></li>
+                    <li><a href="courses.html">Data Science & AI</a></li>
+                    <li><a href="courses.html">Digital Business</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-col footer-newsletter">
+                <h4>Stay Updated</h4>
+                <p>Subscribe to our weekly newsletter for educational articles, event reminders, and product discounts.</p>
+                <form class="newsletter-form" id="newsletter-form" onsubmit="event.preventDefault(); showSubscribeToast();">
+                    <input type="email" placeholder="Enter your email" required id="newsletter-email">
+                    <button type="submit">Join</button>
+                </form>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <p>&copy; 2026 EduVerse Academy. All rights reserved.</p>
+            <p>Built with Passion for Digital Growth</p>
+        </div>
+    </footer>
+
+    <!-- SUCCESS TOAST -->
+    <div class="toast-msg" id="toast-msg">
+        <svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="2.5" fill="none">
+            <polyline points="20 6 9 17 4 12"></polyline>
+        </svg>
+        <span>Successfully subscribed to newsletter!</span>
+    </div>
+
+    <!-- SCRIPTS -->
+    <script>
+        // Header scrolling behavior
+        window.addEventListener('scroll', () => {
+            const header = document.getElementById('header');
+            if (window.scrollY > 50) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+        });
+
+        // Mobile menu toggle
+        const menuToggle = document.getElementById('menu-toggle');
+        const navMenu = document.getElementById('nav-menu');
+
+        menuToggle.addEventListener('click', () => {
+            menuToggle.classList.toggle('open');
+            navMenu.classList.toggle('open');
+        });
+
+        // Close menu when clicking nav link
+        document.querySelectorAll('.nav-link').forEach(link => {
+            link.addEventListener('click', () => {
+                menuToggle.classList.remove('open');
+                navMenu.classList.remove('open');
+            });
+        });
+
+        // Success subscription toast
+        function showSubscribeToast() {
+            const emailInput = document.getElementById('newsletter-email');
+            const toast = document.getElementById('toast-msg');
+            if (emailInput.value) {
+                toast.classList.add('show');
+                emailInput.value = '';
+                setTimeout(() => {
+                    toast.classList.remove('show');
+                }, 3500);
+            }
+        }
+
+        // --- INTERACTIVE COURSE FILTER LOGIC ---
+        const filterButtons = document.querySelectorAll('.filter-btn');
+        const courseCards = document.querySelectorAll('.course-card');
+
+        filterButtons.forEach(btn => {
+            btn.addEventListener('click', () => {
+                // Remove active class from all filter buttons
+                filterButtons.forEach(button => button.classList.remove('active'));
+                // Add active class to current button
+                btn.classList.add('active');
+
+                const filterValue = btn.getAttribute('data-filter');
+
+                courseCards.forEach(card => {
+                    const cardCategory = card.getAttribute('data-category');
+                    if (filterValue === 'all' || cardCategory === filterValue) {
+                        card.classList.remove('hidden');
+                    } else {
+                        card.classList.add('hidden');
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
