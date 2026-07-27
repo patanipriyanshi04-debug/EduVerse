@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EduVerse | Premium Learning Platform</title>
+    <meta name="description" content="Explore world-class courses designed by industry experts. Learn coding, design, and business at your own pace with EduVerse.">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- HEADER / NAVIGATION -->
+    <header class="header" id="header">
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+                EduVerse<span class="logo-dot"></span>
+            </a>
+            
+            <nav>
+                <ul class="nav-menu" id="nav-menu">
+                    <li><a href="index.html" class="nav-link active">Home</a></li>
+                    <li><a href="about.html" class="nav-link">About</a></li>
+                    <li><a href="courses.html" class="nav-link">Courses</a></li>
+                    <li><a href="contact.html" class="nav-link">Contact</a></li>
+                </ul>
+            </nav>
+
+            <button class="menu-toggle" id="menu-toggle" aria-label="Toggle navigation menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section class="hero">
+        <div class="hero-content">
+            <span class="badge-tag">Future of Learning</span>
+            <h1>Unleash Your Potential With <span class="gradient-text">EduVerse</span></h1>
+            <p class="hero-description">
+                Explore world-class interactive courses designed by industry veterans. Master coding, UI/UX design, marketing, and business strategy on a platform built for your growth.
+            </p>
+            <div class="hero-actions">
+                <a href="courses.html" class="btn btn-primary">Explore Courses</a>
+                <a href="about.html" class="btn btn-secondary">Learn More</a>
+            </div>
+        </div>
+        <div class="hero-visual">
+            <div class="hero-image-wrapper">
+                <!-- Glowing abstract graduation cap visual representation using SVG -->
+                <svg class="hero-inner-icon" viewBox="0 0 24 24" width="120" height="120" stroke="currentColor" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M22 10v6M2 10l10-5 10 5-10 5z"></path>
+                    <path d="M6 12v5c0 2 2 3 6 3s6-1 6-3v-5"></path>
+                </svg>
+            </div>
+        </div>
+    </section>
+
+    <!-- STATS SECTION -->
+    <section class="stats-section" style="max-width: var(--max-width); margin: 0 auto;">
+        <div class="stats glass-card">
+            <div class="stat-item">
+                <span class="stat-number">15K+</span>
+                <span class="stat-label">Active Students</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-number">120+</span>
+                <span class="stat-label">Expert Mentors</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-number">250+</span>
+                <span class="stat-label">Tech Courses</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-number">98%</span>
+                <span class="stat-label">Success Rate</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- FEATURED COURSES -->
+    <section class="featured-courses">
+        <h2>Featured <span class="gradient-text">Courses</span></h2>
+        <div class="home-courses-grid">
+            
+            <!-- Course 1 -->
+            <div class="course-card glass-card">
+                <div class="course-img-placeholder">
+                    <svg viewBox="0 0 24 24" width="48" height="48" stroke="currentColor" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                        <polyline points="16 18 22 12 16 6"></polyline>
+                        <polyline points="8 6 2 12 8 18"></polyline>
+                    </svg>
+                </div>
+                <div class="course-card-meta">
+                    <span>CODING</span>
+                    <span>12 WEEKS</span>
+                </div>
+                <h3>Full-Stack Web Development</h3>
+                <p>Learn HTML5, CSS3, modern JavaScript, Node.js, and Databases to build scalable and responsive web applications.</p>
+                <div class="course-card-footer">
+                    <span class="course-price">$499</span>
+                    <a href="courses.html" class="course-link">Enroll Now &rarr;</a>
+                </div>
+            </div>
+
+            <!-- Course 2 -->
+            <div class="course-card glass-card">
+                <div class="course-img-placeholder">
+                    <svg viewBox="0 0 24 24" width="48" height="48" stroke="currentColor" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                        <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+                        <line x1="8" y1="21" x2="16" y2="21"></line>
+                        <line x1="12" y1="17" x2="12" y2="21"></line>
+                    </svg>
+                </div>
+                <div class="course-card-meta">
+                    <span>DESIGN</span>
+                    <span>8 WEEKS</span>
+                </div>
+                <h3>UI/UX Design Masterclass</h3>
+                <p>Master wireframing, high-fidelity UI design, prototyping, user testing, and portfolio creation with Figma.</p>
+                <div class="course-card-footer">
+                    <span class="course-price">$299</span>
+                    <a href="courses.html" class="course-link">Enroll Now &rarr;</a>
+                </div>
+            </div>
+
+            <!-- Course 3 -->
+            <div class="course-card glass-card">
+                <div class="course-img-placeholder">
+                    <svg viewBox="0 0 24 24" width="48" height="48" stroke="currentColor" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path>
+                        <polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline>
+                        <line x1="12" y1="22.08" x2="12" y2="12"></line>
+                    </svg>
+                </div>
+                <div class="course-card-meta">
+                    <span>TECH</span>
+                    <span>16 WEEKS</span>
+                </div>
+                <h3>AI & Machine Learning Intro</h3>
+                <p>Explore regression models, neural networks, computer vision, and building intelligent agents using Python.</p>
+                <div class="course-card-footer">
+                    <span class="course-price">$599</span>
+                    <a href="courses.html" class="course-link">Enroll Now &rarr;</a>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- WHY CHOOSE US (FEATURES) -->
+    <section class="features">
+        <h2>Why Choose <span class="gradient-text">EduVerse</span></h2>
+        <div class="features-grid">
+            
+            <div class="feature-card glass-card">
+                <div class="feature-icon-wrapper">
+                    <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                        <circle cx="9" cy="7" r="4"></circle>
+                        <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                        <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                    </svg>
+                </div>
+                <h3>Expert Instructors</h3>
+                <p>Learn directly from active developers, designers, and business leaders who bring real-world industry expertise.</p>
+            </div>
+
+            <div class="feature-card glass-card">
+                <div class="feature-icon-wrapper">
+                    <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="10"></circle>
+                        <polyline points="12 6 12 12 16 14"></polyline>
+                    </svg>
+                </div>
+                <h3>Flexible Schedule</h3>
+                <p>Access recorded lectures, interactive labs, and downloadable study materials 24/7. Study at the speed of your life.</p>
+            </div>
+
+            <div class="feature-card glass-card">
+                <div class="feature-icon-wrapper">
+                    <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                        <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                    </svg>
+                </div>
+                <h3>Hands-On Experience</h3>
+                <p>Build 10+ robust portfolio projects, participate in group hackathons, and receive peer reviews on your code/designs.</p>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- TESTIMONIALS -->
+    <section class="testimonials">
+        <h2>What Our <span class="gradient-text">Students Say</span></h2>
+        <div class="testimonials-grid">
+            
+            <div class="testimonial-card glass-card">
+                <p>"EduVerse completely transformed my career path. I went from retail to a full-time frontend developer role in under six months!"</p>
+                <div class="student-info">
+                    <div class="student-avatar">SJ</div>
+                    <div class="student-details">
+                        <h4>Sarah Jenkins</h4>
+                        <span>Frontend Dev at TechCorp</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="testimonial-card glass-card">
+                <p>"The UI/UX course was incredibly thorough. Using Figma for real client prompts gave me the exact portfolio I needed to land jobs."</p>
+                <div class="student-info">
+                    <div class="student-avatar">MV</div>
+                    <div class="student-details">
+                        <h4>Marcus Vance</h4>
+                        <span>Freelance Designer</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="testimonial-card glass-card">
+                <p>"The structured learning paths, helpful instructors, and slick dark-mode platform made coding during late-night hours an absolute joy."</p>
+                <div class="student-info">
+                    <div class="student-avatar">EC</div>
+                    <div class="student-details">
+                        <h4>Emily Chen</h4>
+                        <span>AI Researcher</span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-brand">
+                <a href="index.html" class="logo">EduVerse<span class="logo-dot"></span></a>
+                <p>Empowering individuals to learn, grow, and craft the future through top-tier online education programs.</p>
+                <div class="social-links">
+                    <a href="#" class="social-icon" aria-label="Twitter">
+                        <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none">
+                            <path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"></path>
+                        </svg>
+                    </a>
+                    <a href="#" class="social-icon" aria-label="GitHub">
+                        <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none">
+                            <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+                        </svg>
+                    </a>
+                    <a href="#" class="social-icon" aria-label="LinkedIn">
+                        <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none">
+                            <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+                            <rect x="2" y="9" width="4" height="12"></rect>
+                            <circle cx="4" cy="4" r="2"></circle>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+            
+            <div class="footer-col">
+                <h4>Sitemap</h4>
+                <ul class="footer-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="courses.html">Our Courses</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-col">
+                <h4>Categories</h4>
+                <ul class="footer-links">
+                    <li><a href="courses.html">Web Development</a></li>
+                    <li><a href="courses.html">User Interface Design</a></li>
+                    <li><a href="courses.html">Data Science & AI</a></li>
+                    <li><a href="courses.html">Digital Business</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-col footer-newsletter">
+                <h4>Stay Updated</h4>
+                <p>Subscribe to our weekly newsletter for educational articles, event reminders, and product discounts.</p>
+                <form class="newsletter-form" id="newsletter-form" onsubmit="event.preventDefault(); showSubscribeToast();">
+                    <input type="email" placeholder="Enter your email" required id="newsletter-email">
+                    <button type="submit">Join</button>
+                </form>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <p>&copy; 2026 EduVerse Academy. All rights reserved.</p>
+            <p>Built with Passion for Digital Growth</p>
+        </div>
+    </footer>
+
+    <!-- SUCCESS TOAST -->
+    <div class="toast-msg" id="toast-msg">
+        <svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="2.5" fill="none">
+            <polyline points="20 6 9 17 4 12"></polyline>
+        </svg>
+        <span>Successfully subscribed to newsletter!</span>
+    </div>
+
+    <!-- SCRIPTS -->
+    <script>
+        // Header scrolling behavior
+        window.addEventListener('scroll', () => {
+            const header = document.getElementById('header');
+            if (window.scrollY > 50) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+        });
+
+        // Mobile menu toggle
+        const menuToggle = document.getElementById('menu-toggle');
+        const navMenu = document.getElementById('nav-menu');
+
+        menuToggle.addEventListener('click', () => {
+            menuToggle.classList.toggle('open');
+            navMenu.classList.toggle('open');
+        });
+
+        // Close menu when clicking nav link
+        document.querySelectorAll('.nav-link').forEach(link => {
+            link.addEventListener('click', () => {
+                menuToggle.classList.remove('open');
+                navMenu.classList.remove('open');
+            });
+        });
+
+        // Success subscription toast
+        function showSubscribeToast() {
+            const emailInput = document.getElementById('newsletter-email');
+            const toast = document.getElementById('toast-msg');
+            if (emailInput.value) {
+                toast.classList.add('show');
+                emailInput.value = '';
+                setTimeout(() => {
+                    toast.classList.remove('show');
+                }, 3500);
+            }
+        }
+    </script>
+</body>
+</html>
