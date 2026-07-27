@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us | EduVerse</title>
+    <meta name="description" content="Reach out to the EduVerse support team for admissions, partnerships, or technical inquiries.">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- HEADER / NAVIGATION -->
+    <header class="header" id="header">
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+                EduVerse<span class="logo-dot"></span>
+            </a>
+            
+            <nav>
+                <ul class="nav-menu" id="nav-menu">
+                    <li><a href="index.html" class="nav-link">Home</a></li>
+                    <li><a href="about.html" class="nav-link">About</a></li>
+                    <li><a href="courses.html" class="nav-link">Courses</a></li>
+                    <li><a href="contact.html" class="nav-link active">Contact</a></li>
+                </ul>
+            </nav>
+
+            <button class="menu-toggle" id="menu-toggle" aria-label="Toggle navigation menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+
+    <!-- PAGE HEADER -->
+    <section class="page-header">
+        <h1>Contact <span class="gradient-text">Us</span></h1>
+        <p>Have questions about course syllabi, pricing, or corporate options? Reach out to our admissions team.</p>
+    </section>
+
+    <!-- CONTACT CONTAINER -->
+    <section class="contact-layout">
+        
+        <!-- Contact Info Side -->
+        <div class="contact-info-panel">
+            <span class="badge-tag">Connect</span>
+            <h3>How to Reach Us</h3>
+            <p>Our advisors are available Monday through Friday, 9:00 AM to 6:00 PM EST. Fill out the contact form or reach out directly.</p>
+            
+            <div class="info-list">
+                
+                <!-- Address -->
+                <div class="info-item">
+                    <div class="info-icon">
+                        <svg viewBox="0 0 24 24" width="22" height="22" stroke="currentColor" stroke-width="2" fill="none">
+                            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                            <circle cx="12" cy="10" r="3"></circle>
+                        </svg>
+                    </div>
+                    <div class="info-details">
+                        <h4>Our Location</h4>
+                        <p>123 Innovation Blvd, Suite 500, Tech City, TC 90210</p>
+                    </div>
+                </div>
+
+                <!-- Phone -->
+                <div class="info-item">
+                    <div class="info-icon">
+                        <svg viewBox="0 0 24 24" width="22" height="22" stroke="currentColor" stroke-width="2" fill="none">
+                            <rect x="5" y="2" width="14" height="20" rx="2" ry="2"></rect>
+                            <line x1="12" y1="18" x2="12.01" y2="18"></line>
+                        </svg>
+                    </div>
+                    <div class="info-details">
+                        <h4>Phone Number</h4>
+                        <p><a href="tel:+15550192834">+1 (555) 019-2834</a></p>
+                    </div>
+                </div>
+
+                <!-- Email -->
+                <div class="info-item">
+                    <div class="info-icon">
+                        <svg viewBox="0 0 24 24" width="22" height="22" stroke="currentColor" stroke-width="2" fill="none">
+                            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                            <polyline points="22,6 12,13 2,6"></polyline>
+                        </svg>
+                    </div>
+                    <div class="info-details">
+                        <h4>Email Address</h4>
+                        <p><a href="mailto:support@eduverse.com">support@eduverse.com</a></p>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Custom Mock Map Card -->
+            <div class="map-container glass-card">
+                <svg class="map-icon" viewBox="0 0 24 24" width="48" height="48" stroke="currentColor" stroke-width="1.5" fill="none" style="animation: float 4s ease-in-out infinite;">
+                    <polygon points="3 6 9 3 15 6 21 3 21 18 15 21 9 18 3 21"></polygon>
+                    <line x1="9" y1="3" x2="9" y2="18"></line>
+                    <line x1="15" y1="6" x2="15" y2="21"></line>
+                </svg>
+                <span style="font-weight: 600; font-size: 0.95rem; color: var(--text-primary);">Interactive Campus Map</span>
+                <span style="font-size: 0.85rem; color: var(--text-muted);">Latitude 37.7749 &bull; Longitude -122.4194</span>
+            </div>
+
+        </div>
+
+        <!-- Contact Form Side -->
+        <form class="contact-form glass-card" id="contact-form" onsubmit="event.preventDefault(); showContactSuccessToast();">
+            <h3 class="form-title">Send a <span class="gradient-text">Message</span></h3>
+            
+            <div class="form-group-row">
+                <div class="form-group">
+                    <input type="text" class="form-control" placeholder=" " id="first-name" required>
+                    <label class="form-label" for="first-name">First Name</label>
+                </div>
+                
+                <div class="form-group">
+                    <input type="text" class="form-control" placeholder=" " id="last-name" required>
+                    <label class="form-label" for="last-name">Last Name</label>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <input type="email" class="form-control" placeholder=" " id="contact-email" required>
+                <label class="form-label" for="contact-email">Email Address</label>
+            </div>
+
+            <div class="form-group">
+                <input type="text" class="form-control" placeholder=" " id="contact-subject" required>
+                <label class="form-label" for="contact-subject">Subject</label>
+            </div>
+
+            <div class="form-group">
+                <textarea class="form-control" placeholder=" " id="contact-message" required></textarea>
+                <label class="form-label" for="contact-message">Your Message</label>
+            </div>
+
+            <button type="submit" class="btn btn-primary" style="width: 100%;">
+                Send Message
+                <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="22" y1="2" x2="11" y2="13"></line>
+                    <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+                </svg>
+            </button>
+        </form>
+
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-brand">
+                <a href="index.html" class="logo">EduVerse<span class="logo-dot"></span></a>
+                <p>Empowering individuals to learn, grow, and craft the future through top-tier online education programs.</p>
+                <div class="social-links">
+                    <a href="#" class="social-icon" aria-label="Twitter">
+                        <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none">
+                            <path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"></path>
+                        </svg>
+                    </a>
+                    <a href="#" class="social-icon" aria-label="GitHub">
+                        <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none">
+                            <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+                        </svg>
+                    </a>
+                    <a href="#" class="social-icon" aria-label="LinkedIn">
+                        <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none">
+                            <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+                            <rect x="2" y="9" width="4" height="12"></rect>
+                            <circle cx="4" cy="4" r="2"></circle>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+            
+            <div class="footer-col">
+                <h4>Sitemap</h4>
+                <ul class="footer-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="courses.html">Our Courses</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-col">
+                <h4>Categories</h4>
+                <ul class="footer-links">
+                    <li><a href="courses.html">Web Development</a></li>
+                    <li><a href="courses.html">User Interface Design</a></li>
+                    <li><a href="courses.html">Data Science & AI</a></li>
+                    <li><a href="courses.html">Digital Business</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-col footer-newsletter">
+                <h4>Stay Updated</h4>
+                <p>Subscribe to our weekly newsletter for educational articles, event reminders, and product discounts.</p>
+                <form class="newsletter-form" id="newsletter-form" onsubmit="event.preventDefault(); showSubscribeToast();">
+                    <input type="email" placeholder="Enter your email" required id="newsletter-email">
+                    <button type="submit">Join</button>
+                </form>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <p>&copy; 2026 EduVerse Academy. All rights reserved.</p>
+            <p>Built with Passion for Digital Growth</p>
+        </div>
+    </footer>
+
+    <!-- SUCCESS TOAST -->
+    <div class="toast-msg" id="toast-msg">
+        <svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="2.5" fill="none">
+            <polyline points="20 6 9 17 4 12"></polyline>
+        </svg>
+        <span id="toast-msg-text">Successfully subscribed to newsletter!</span>
+    </div>
+
+    <!-- SCRIPTS -->
+    <script>
+        // Header scrolling behavior
+        window.addEventListener('scroll', () => {
+            const header = document.getElementById('header');
+            if (window.scrollY > 50) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+        });
+
+        // Mobile menu toggle
+        const menuToggle = document.getElementById('menu-toggle');
+        const navMenu = document.getElementById('nav-menu');
+
+        menuToggle.addEventListener('click', () => {
+            menuToggle.classList.toggle('open');
+            navMenu.classList.toggle('open');
+        });
+
+        // Close menu when clicking nav link
+        document.querySelectorAll('.nav-link').forEach(link => {
+            link.addEventListener('click', () => {
+                menuToggle.classList.remove('open');
+                navMenu.classList.remove('open');
+            });
+        });
+
+        // Toast display utility
+        function triggerToast(message) {
+            const toast = document.getElementById('toast-msg');
+            const toastText = document.getElementById('toast-msg-text');
+            toastText.textContent = message;
+            toast.classList.add('show');
+            setTimeout(() => {
+                toast.classList.remove('show');
+            }, 3500);
+        }
+
+        // Newsletter subscription toast
+        function showSubscribeToast() {
+            const emailInput = document.getElementById('newsletter-email');
+            if (emailInput.value) {
+                triggerToast('Successfully subscribed to newsletter!');
+                emailInput.value = '';
+            }
+        }
+
+        // Contact form success toast
+        function showContactSuccessToast() {
+            triggerToast('Message sent successfully! We will respond within 24 hours.');
+            document.getElementById('contact-form').reset();
+        }
+    </script>
+</body>
+</html>
