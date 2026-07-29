@@ -1065,6 +1065,10 @@ textarea.form-control {
 }
 
 @media (max-width: 768px) {
+    section {
+        padding: 4rem 1.2rem;
+    }
+
     .nav-menu {
         position: fixed;
         top: 0;
@@ -1079,6 +1083,9 @@ textarea.form-control {
         gap: 3rem;
         transition: var(--transition-smooth);
         box-shadow: -10px 0 30px rgba(0, 0, 0, 0.5);
+        z-index: 1000;
+        overflow-y: auto;
+        padding: 4rem 2rem;
     }
     
     .nav-menu.open {
@@ -1101,14 +1108,31 @@ textarea.form-control {
     .menu-toggle.open span:nth-child(3) {
         transform: rotate(-45deg) translate(5px, -5px);
     }
+
+    .stats {
+        padding-top: 1rem;
+        padding-bottom: 2rem;
+    }
     
     .footer-container {
         grid-template-columns: 1fr;
-        gap: 2rem;
+        gap: 2.5rem;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+        text-align: center;
+        gap: 0.8rem;
     }
     
     .home-courses-grid, .courses-grid, .features-grid, .testimonials-grid, .team-grid, .values-grid {
         grid-template-columns: 1fr;
+    }
+
+    .courses-filter-bar {
+        flex-wrap: wrap;
+        gap: 0.5rem;
+        margin-bottom: 2.5rem;
     }
     
     .form-group-row {
@@ -1122,10 +1146,27 @@ textarea.form-control {
 }
 
 @media (max-width: 480px) {
-    h1 { font-size: 2.2rem; }
+    h1 { font-size: 1.8rem; }
+    h2 { font-size: 1.75rem; }
+    h3 { font-size: 1.3rem; }
+    
+    .hero-image-wrapper {
+        max-width: 280px;
+        height: 280px;
+    }
+
+    .hero-inner-icon {
+        width: 80px;
+        height: 80px;
+    }
     
     .stats {
         grid-template-columns: 1fr;
+    }
+
+    .about-stats-card {
+        grid-template-columns: 1fr;
+        padding: 2rem 1.5rem;
     }
     
     .hero-actions {
@@ -1137,3 +1178,4 @@ textarea.form-control {
         width: 100%;
     }
 }
+
