@@ -5,6 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Our Courses | EduVerse</title>
     <meta name="description" content="Browse our catalog of professional courses in coding, UI/UX design, business, and artificial intelligence.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -25,7 +28,7 @@
                 </ul>
             </nav>
 
-            <button class="menu-toggle" id="menu-toggle" aria-label="Toggle navigation menu">
+            <button class="menu-toggle" id="menu-toggle" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="nav-menu">
                 <span></span>
                 <span></span>
                 <span></span>
@@ -250,7 +253,7 @@
         <svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="2.5" fill="none">
             <polyline points="20 6 9 17 4 12"></polyline>
         </svg>
-        <span>Successfully subscribed to newsletter!</span>
+        <span id="toast-msg-text">Successfully subscribed to newsletter!</span>
     </div>
 
     <!-- SCRIPTS -->
@@ -270,8 +273,9 @@
         const navMenu = document.getElementById('nav-menu');
 
         menuToggle.addEventListener('click', () => {
-            menuToggle.classList.toggle('open');
+            const isOpen = menuToggle.classList.toggle('open');
             navMenu.classList.toggle('open');
+            menuToggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
         });
 
         // Close menu when clicking nav link
@@ -279,19 +283,27 @@
             link.addEventListener('click', () => {
                 menuToggle.classList.remove('open');
                 navMenu.classList.remove('open');
+                menuToggle.setAttribute('aria-expanded', 'false');
             });
         });
 
-        // Success subscription toast
+        // Toast display utility
+        function triggerToast(message) {
+            const toast = document.getElementById('toast-msg');
+            const toastText = document.getElementById('toast-msg-text');
+            toastText.textContent = message;
+            toast.classList.add('show');
+            setTimeout(() => {
+                toast.classList.remove('show');
+            }, 3500);
+        }
+
+        // Newsletter subscription toast
         function showSubscribeToast() {
             const emailInput = document.getElementById('newsletter-email');
-            const toast = document.getElementById('toast-msg');
             if (emailInput.value) {
-                toast.classList.add('show');
+                triggerToast('Successfully subscribed to newsletter!');
                 emailInput.value = '';
-                setTimeout(() => {
-                    toast.classList.remove('show');
-                }, 3500);
             }
         }
 
