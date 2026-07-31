@@ -1,4 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap');
+/* Fonts are loaded via <link> tags in each page's <head> for faster,
+   non-render-blocking loading (an @import here would delay CSS parsing). */
 
 /* --- CUSTOM PROPERTIES & CSS VARIABLES --- */
 :root {
@@ -10,6 +11,7 @@
     
     --primary: #6366f1;
     --primary-gradient: linear-gradient(135deg, #6366f1 0%, #a855f7 100%);
+    --secondary: #a855f7;
     --accent: #f59e0b;
     --accent-gradient: linear-gradient(135deg, #fbbf24 0%, #f59e0b 100%);
     
@@ -184,6 +186,10 @@ p {
     background: rgba(255, 255, 255, 0.12);
     border-color: rgba(255, 255, 255, 0.2);
     transform: translateY(-3px);
+}
+
+.btn-block {
+    width: 100%;
 }
 
 /* Glassmorphic Card */
@@ -816,6 +822,14 @@ section {
     gap: 2rem;
 }
 
+.value-card h3 {
+    margin-bottom: 1rem;
+}
+
+.value-card--accent h3 { color: var(--accent); }
+.value-card--primary h3 { color: var(--primary); }
+.value-card--secondary h3 { color: var(--secondary); }
+
 /* --- PAGE 3: COURSES PAGE --- */
 .courses-filter-bar {
     display: flex;
@@ -1014,6 +1028,18 @@ textarea.form-control {
 .map-icon {
     font-size: 2.5rem;
     color: var(--primary);
+    animation: float 4s ease-in-out infinite;
+}
+
+.map-title {
+    font-weight: 600;
+    font-size: 0.95rem;
+    color: var(--text-primary);
+}
+
+.map-subtitle {
+    font-size: 0.85rem;
+    color: var(--text-muted);
 }
 
 /* --- RESPONSIVE MEDIA QUERIES --- */
@@ -1045,7 +1071,7 @@ textarea.form-control {
         grid-template-columns: repeat(2, 1fr);
     }
     
-    .home-courses-grid, .courses-grid, .features-grid, .testimonials-grid {
+    .home-courses-grid, .courses-grid, .features-grid, .testimonials-grid, .values-grid {
         grid-template-columns: repeat(2, 1fr);
     }
     
@@ -1178,4 +1204,3 @@ textarea.form-control {
         width: 100%;
     }
 }
-
