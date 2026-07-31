@@ -5,6 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact Us | EduVerse</title>
     <meta name="description" content="Reach out to the EduVerse support team for admissions, partnerships, or technical inquiries.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -25,7 +28,7 @@
                 </ul>
             </nav>
 
-            <button class="menu-toggle" id="menu-toggle" aria-label="Toggle navigation menu">
+            <button class="menu-toggle" id="menu-toggle" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="nav-menu">
                 <span></span>
                 <span></span>
                 <span></span>
@@ -96,13 +99,13 @@
 
             <!-- Custom Mock Map Card -->
             <div class="map-container glass-card">
-                <svg class="map-icon" viewBox="0 0 24 24" width="48" height="48" stroke="currentColor" stroke-width="1.5" fill="none" style="animation: float 4s ease-in-out infinite;">
+                <svg class="map-icon" viewBox="0 0 24 24" width="48" height="48" stroke="currentColor" stroke-width="1.5" fill="none">
                     <polygon points="3 6 9 3 15 6 21 3 21 18 15 21 9 18 3 21"></polygon>
                     <line x1="9" y1="3" x2="9" y2="18"></line>
                     <line x1="15" y1="6" x2="15" y2="21"></line>
                 </svg>
-                <span style="font-weight: 600; font-size: 0.95rem; color: var(--text-primary);">Interactive Campus Map</span>
-                <span style="font-size: 0.85rem; color: var(--text-muted);">Latitude 37.7749 &bull; Longitude -122.4194</span>
+                <span class="map-title">Interactive Campus Map</span>
+                <span class="map-subtitle">Latitude 37.7749 &bull; Longitude -122.4194</span>
             </div>
 
         </div>
@@ -138,7 +141,7 @@
                 <label class="form-label" for="contact-message">Your Message</label>
             </div>
 
-            <button type="submit" class="btn btn-primary" style="width: 100%;">
+            <button type="submit" class="btn btn-primary btn-block">
                 Send Message
                 <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
                     <line x1="22" y1="2" x2="11" y2="13"></line>
@@ -237,8 +240,9 @@
         const navMenu = document.getElementById('nav-menu');
 
         menuToggle.addEventListener('click', () => {
-            menuToggle.classList.toggle('open');
+            const isOpen = menuToggle.classList.toggle('open');
             navMenu.classList.toggle('open');
+            menuToggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
         });
 
         // Close menu when clicking nav link
@@ -246,6 +250,7 @@
             link.addEventListener('click', () => {
                 menuToggle.classList.remove('open');
                 navMenu.classList.remove('open');
+                menuToggle.setAttribute('aria-expanded', 'false');
             });
         });
 
